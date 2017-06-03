@@ -17,7 +17,7 @@ class CustomDeviseMailer < Devise::Mailer
     opts[:subject] = "Activate your account"
     headers['X-Mailgun-Variables'] = {:email => @resource.email}.to_json
     in_time = Time.now + 2.days
-    CommunicationWorker.perform_in(1.minutes,@resource.id)
+    CommunicationWorker.perform_in(in_time,@resource.id)
     mail to: "#{@resource.email}"
     super
   end

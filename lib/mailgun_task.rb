@@ -4,8 +4,8 @@ module MailgunTask
   require 'csv'
   require 'localtunnel'
 
-  MAILGUN_KEY = "key-63203fd6d350653577c47785ff30203b"
-  MAILGUN_DOMAIN = "sandbox3c819ebb63b540e3b988831c30a2c0d0.mailgun.org"
+  MAILGUN_KEY = ""
+  MAILGUN_DOMAIN = ""
   COMMON_URI = "api:#{MAILGUN_KEY}@api.mailgun.net/v3/#{MAILGUN_DOMAIN}"
 
   class << self
